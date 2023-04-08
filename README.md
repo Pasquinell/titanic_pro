@@ -4,15 +4,7 @@ This repository contains a model training and inference pipeline for predicting 
 - Add simple model versioning
 - Add cvs mocking
 ## Warning
-This repo was built for running in windows, so you shoulb be careful with pathing. You may want to change 
-```python
-dump(pipeline, 'titanic_pro/model.joblib')
-```
-in `train.py` and
-```python
-submission.to_csv("titanic_pro/submission.csv", index=False)
-```
-in `infer.py`.
+This repo was built for running in windows, so you shoulb be careful with pathing. 
 
 ## Project Structure
 The project is organized as follows:
@@ -55,7 +47,7 @@ Clone the repository:
 
 Install the dependencies:
 ```console
-poetry install
+poetry update
 ```
 Activate the virtual environment:
 ```console
@@ -69,11 +61,7 @@ To train the model, run:
 python train.py
 ```
 This script will load the Titanic dataset, preprocess the data, optimize the hyperparameters, perform feature selection, and train the XGBoost model using the best parameters.
-### Warning
-In windows I had to run from the parent directory calling titanic_pro and then train (the same for inference)!
-```console
-python .\titanic_pro\train.py
-```
+
 ### Inference
 To predict the survival of passengers in the test dataset, run:
 

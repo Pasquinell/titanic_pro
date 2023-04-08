@@ -7,7 +7,7 @@ from joblib import load
 
 def main():
     logger.info("Loading the model...")
-    model = load("titanic_pro/models/model.joblib")
+    model = load("models/model.joblib")
 
     logger.info("Loading test data...")
     _, test_df = load_data()
@@ -18,7 +18,7 @@ def main():
     logger.info("Saving predictions...")
     submission = pd.DataFrame({"name": test_df["name"], "survived": predictions})
     submission.to_csv(
-        "titanic_pro/submission.csv", index=False
+        "submission.csv", index=False
     )  #  We would usually posted on a database instead
 
 

@@ -33,7 +33,7 @@ def main():
     logger.info(f"Validation accuracy: {score}")
 
     logger.info("Saving the model...")
-    dump(pipeline, "titanic_pro/models/model.joblib")
+    dump(pipeline, "models/model.joblib")
 
 
 if __name__ == "__main__":
